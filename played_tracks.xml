@@ -2,7 +2,7 @@
 <template encoding-version="1.3">
     <description></description>
     <groupId>56ca88a3-0178-1000-ff28-6f95f0d7422f</groupId>
-    <name>my_spotify</name>
+    <name>played_tracks</name>
     <snippet>
         <connections>
             <id>93e50e45-64b5-31e2-0000-000000000000</id>
@@ -62,25 +62,12 @@
                 <group>org.apache.nifi</group>
                 <version>1.13.0</version>
             </bundle>
+            <comments></comments>
             <descriptors>
                 <entry>
-                    <key>schema-branch</key>
+                    <key>Schema Write Strategy</key>
                     <value>
-                        <dependencies>
-                            <dependentValues>schema-name</dependentValues>
-                            <propertyName>schema-access-strategy</propertyName>
-                        </dependencies>
-                        <name>schema-branch</name>
-                    </value>
-                </entry>
-                <entry>
-                    <key>compression-level</key>
-                    <value>
-                        <dependencies>
-                            <dependentValues>gzip</dependentValues>
-                            <propertyName>compression-format</propertyName>
-                        </dependencies>
-                        <name>compression-level</name>
+                        <name>Schema Write Strategy</name>
                     </value>
                 </entry>
                 <entry>
@@ -91,55 +78,20 @@
                     </value>
                 </entry>
                 <entry>
-                    <key>Timestamp Format</key>
-                    <value>
-                        <name>Timestamp Format</name>
-                    </value>
-                </entry>
-                <entry>
-                    <key>Date Format</key>
-                    <value>
-                        <name>Date Format</name>
-                    </value>
-                </entry>
-                <entry>
-                    <key>Pretty Print JSON</key>
-                    <value>
-                        <name>Pretty Print JSON</name>
-                    </value>
-                </entry>
-                <entry>
-                    <key>compression-format</key>
-                    <value>
-                        <name>compression-format</name>
-                    </value>
-                </entry>
-                <entry>
-                    <key>Schema Write Strategy</key>
-                    <value>
-                        <name>Schema Write Strategy</name>
-                    </value>
-                </entry>
-                <entry>
-                    <key>suppress-nulls</key>
-                    <value>
-                        <name>suppress-nulls</name>
-                    </value>
-                </entry>
-                <entry>
-                    <key>output-grouping</key>
-                    <value>
-                        <name>output-grouping</name>
-                    </value>
-                </entry>
-                <entry>
-                    <key>schema-name</key>
+                    <key>schema-protocol-version</key>
                     <value>
                         <dependencies>
-                            <dependentValues>schema-name</dependentValues>
-                            <propertyName>schema-access-strategy</propertyName>
+                            <dependentValues>hwx-schema-ref-attributes</dependentValues>
+                            <dependentValues>hwx-content-encoded-schema</dependentValues>
+                            <propertyName>Schema Write Strategy</propertyName>
                         </dependencies>
-                        <name>schema-name</name>
+                        <name>schema-protocol-version</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>schema-access-strategy</key>
+                    <value>
+                        <name>schema-access-strategy</name>
                     </value>
                 </entry>
                 <entry>
@@ -157,26 +109,13 @@
                     </value>
                 </entry>
                 <entry>
-                    <key>Time Format</key>
-                    <value>
-                        <name>Time Format</name>
-                    </value>
-                </entry>
-                <entry>
-                    <key>schema-access-strategy</key>
-                    <value>
-                        <name>schema-access-strategy</name>
-                    </value>
-                </entry>
-                <entry>
-                    <key>schema-protocol-version</key>
+                    <key>schema-name</key>
                     <value>
                         <dependencies>
-                            <dependentValues>hwx-schema-ref-attributes</dependentValues>
-                            <dependentValues>hwx-content-encoded-schema</dependentValues>
-                            <propertyName>Schema Write Strategy</propertyName>
+                            <dependentValues>schema-name</dependentValues>
+                            <propertyName>schema-access-strategy</propertyName>
                         </dependencies>
-                        <name>schema-protocol-version</name>
+                        <name>schema-name</name>
                     </value>
                 </entry>
                 <entry>
@@ -190,6 +129,16 @@
                     </value>
                 </entry>
                 <entry>
+                    <key>schema-branch</key>
+                    <value>
+                        <dependencies>
+                            <dependentValues>schema-name</dependentValues>
+                            <propertyName>schema-access-strategy</propertyName>
+                        </dependencies>
+                        <name>schema-branch</name>
+                    </value>
+                </entry>
+                <entry>
                     <key>schema-text</key>
                     <value>
                         <dependencies>
@@ -199,60 +148,122 @@
                         <name>schema-text</name>
                     </value>
                 </entry>
+                <entry>
+                    <key>Date Format</key>
+                    <value>
+                        <name>Date Format</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>Time Format</key>
+                    <value>
+                        <name>Time Format</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>Timestamp Format</key>
+                    <value>
+                        <name>Timestamp Format</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>Pretty Print JSON</key>
+                    <value>
+                        <name>Pretty Print JSON</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>suppress-nulls</key>
+                    <value>
+                        <name>suppress-nulls</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>output-grouping</key>
+                    <value>
+                        <name>output-grouping</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>compression-format</key>
+                    <value>
+                        <name>compression-format</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>compression-level</key>
+                    <value>
+                        <dependencies>
+                            <dependentValues>gzip</dependentValues>
+                            <propertyName>compression-format</propertyName>
+                        </dependencies>
+                        <name>compression-level</name>
+                    </value>
+                </entry>
             </descriptors>
             <name>JsonRecordSetWriter</name>
             <persistsState>false</persistsState>
             <properties>
                 <entry>
-                    <key>schema-branch</key>
-                </entry>
-                <entry>
-                    <key>compression-level</key>
+                    <key>Schema Write Strategy</key>
+                    <value>no-schema</value>
                 </entry>
                 <entry>
                     <key>schema-cache</key>
                 </entry>
                 <entry>
-                    <key>Timestamp Format</key>
+                    <key>schema-protocol-version</key>
+                    <value>1</value>
                 </entry>
                 <entry>
-                    <key>Date Format</key>
-                </entry>
-                <entry>
-                    <key>Pretty Print JSON</key>
-                </entry>
-                <entry>
-                    <key>compression-format</key>
-                </entry>
-                <entry>
-                    <key>Schema Write Strategy</key>
-                </entry>
-                <entry>
-                    <key>suppress-nulls</key>
-                </entry>
-                <entry>
-                    <key>output-grouping</key>
-                </entry>
-                <entry>
-                    <key>schema-name</key>
+                    <key>schema-access-strategy</key>
+                    <value>inherit-record-schema</value>
                 </entry>
                 <entry>
                     <key>schema-registry</key>
                 </entry>
                 <entry>
-                    <key>Time Format</key>
-                </entry>
-                <entry>
-                    <key>schema-access-strategy</key>
-                </entry>
-                <entry>
-                    <key>schema-protocol-version</key>
+                    <key>schema-name</key>
+                    <value>${schema.name}</value>
                 </entry>
                 <entry>
                     <key>schema-version</key>
                 </entry>
                 <entry>
+                    <key>schema-branch</key>
+                </entry>
+                <entry>
                     <key>schema-text</key>
+                    <value>${avro.schema}</value>
+                </entry>
+                <entry>
+                    <key>Date Format</key>
+                </entry>
+                <entry>
+                    <key>Time Format</key>
+                </entry>
+                <entry>
+                    <key>Timestamp Format</key>
+                </entry>
+                <entry>
+                    <key>Pretty Print JSON</key>
+                    <value>false</value>
+                </entry>
+                <entry>
+                    <key>suppress-nulls</key>
+                    <value>never-suppress</value>
+                </entry>
+                <entry>
+                    <key>output-grouping</key>
+                    <value>output-array</value>
+                </entry>
+                <entry>
+                    <key>compression-format</key>
+                    <value>none</value>
+                </entry>
+                <entry>
+                    <key>compression-level</key>
+                    <value>1</value>
                 </entry>
             </properties>
             <state>ENABLED</state>
@@ -275,15 +286,15 @@
                     </value>
                 </entry>
                 <entry>
-                    <key>azure-cosmos-db-consistency-level</key>
-                    <value>
-                        <name>azure-cosmos-db-consistency-level</name>
-                    </value>
-                </entry>
-                <entry>
                     <key>azure-cosmos-db-key</key>
                     <value>
                         <name>azure-cosmos-db-key</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>azure-cosmos-db-consistency-level</key>
+                    <value>
+                        <name>azure-cosmos-db-consistency-level</name>
                     </value>
                 </entry>
             </descriptors>
@@ -294,10 +305,11 @@
                     <key>azure-cosmos-db-uri</key>
                 </entry>
                 <entry>
-                    <key>azure-cosmos-db-consistency-level</key>
+                    <key>azure-cosmos-db-key</key>
                 </entry>
                 <entry>
-                    <key>azure-cosmos-db-key</key>
+                    <key>azure-cosmos-db-consistency-level</key>
+                    <value>SESSION</value>
                 </entry>
             </properties>
             <state>ENABLED</state>
@@ -311,11 +323,66 @@
                 <group>org.apache.nifi</group>
                 <version>1.13.0</version>
             </bundle>
+            <comments></comments>
             <descriptors>
                 <entry>
-                    <key>Timestamp Format</key>
+                    <key>schema-access-strategy</key>
                     <value>
-                        <name>Timestamp Format</name>
+                        <name>schema-access-strategy</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>schema-registry</key>
+                    <value>
+                        <dependencies>
+                            <dependentValues>confluent-encoded</dependentValues>
+                            <dependentValues>schema-name</dependentValues>
+                            <dependentValues>hwx-schema-ref-attributes</dependentValues>
+                            <dependentValues>hwx-content-encoded-schema</dependentValues>
+                            <propertyName>schema-access-strategy</propertyName>
+                        </dependencies>
+                        <identifiesControllerService>org.apache.nifi.schemaregistry.services.SchemaRegistry</identifiesControllerService>
+                        <name>schema-registry</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>schema-name</key>
+                    <value>
+                        <dependencies>
+                            <dependentValues>schema-name</dependentValues>
+                            <propertyName>schema-access-strategy</propertyName>
+                        </dependencies>
+                        <name>schema-name</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>schema-version</key>
+                    <value>
+                        <dependencies>
+                            <dependentValues>schema-name</dependentValues>
+                            <propertyName>schema-access-strategy</propertyName>
+                        </dependencies>
+                        <name>schema-version</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>schema-branch</key>
+                    <value>
+                        <dependencies>
+                            <dependentValues>schema-name</dependentValues>
+                            <propertyName>schema-access-strategy</propertyName>
+                        </dependencies>
+                        <name>schema-branch</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>schema-text</key>
+                    <value>
+                        <dependencies>
+                            <dependentValues>schema-text-property</dependentValues>
+                            <propertyName>schema-access-strategy</propertyName>
+                        </dependencies>
+                        <name>schema-text</name>
                     </value>
                 </entry>
                 <entry>
@@ -336,69 +403,15 @@
                     </value>
                 </entry>
                 <entry>
-                    <key>schema-branch</key>
-                    <value>
-                        <dependencies>
-                            <dependentValues>schema-name</dependentValues>
-                            <propertyName>schema-access-strategy</propertyName>
-                        </dependencies>
-                        <name>schema-branch</name>
-                    </value>
-                </entry>
-                <entry>
-                    <key>schema-name</key>
-                    <value>
-                        <dependencies>
-                            <dependentValues>schema-name</dependentValues>
-                            <propertyName>schema-access-strategy</propertyName>
-                        </dependencies>
-                        <name>schema-name</name>
-                    </value>
-                </entry>
-                <entry>
-                    <key>schema-registry</key>
-                    <value>
-                        <dependencies>
-                            <dependentValues>confluent-encoded</dependentValues>
-                            <dependentValues>schema-name</dependentValues>
-                            <dependentValues>hwx-schema-ref-attributes</dependentValues>
-                            <dependentValues>hwx-content-encoded-schema</dependentValues>
-                            <propertyName>schema-access-strategy</propertyName>
-                        </dependencies>
-                        <identifiesControllerService>org.apache.nifi.schemaregistry.services.SchemaRegistry</identifiesControllerService>
-                        <name>schema-registry</name>
-                    </value>
-                </entry>
-                <entry>
                     <key>Time Format</key>
                     <value>
                         <name>Time Format</name>
                     </value>
                 </entry>
                 <entry>
-                    <key>schema-access-strategy</key>
+                    <key>Timestamp Format</key>
                     <value>
-                        <name>schema-access-strategy</name>
-                    </value>
-                </entry>
-                <entry>
-                    <key>schema-version</key>
-                    <value>
-                        <dependencies>
-                            <dependentValues>schema-name</dependentValues>
-                            <propertyName>schema-access-strategy</propertyName>
-                        </dependencies>
-                        <name>schema-version</name>
-                    </value>
-                </entry>
-                <entry>
-                    <key>schema-text</key>
-                    <value>
-                        <dependencies>
-                            <dependentValues>schema-text-property</dependentValues>
-                            <propertyName>schema-access-strategy</propertyName>
-                        </dependencies>
-                        <name>schema-text</name>
+                        <name>Timestamp Format</name>
                     </value>
                 </entry>
             </descriptors>
@@ -406,7 +419,25 @@
             <persistsState>false</persistsState>
             <properties>
                 <entry>
-                    <key>Timestamp Format</key>
+                    <key>schema-access-strategy</key>
+                    <value>infer-schema</value>
+                </entry>
+                <entry>
+                    <key>schema-registry</key>
+                </entry>
+                <entry>
+                    <key>schema-name</key>
+                    <value>${schema.name}</value>
+                </entry>
+                <entry>
+                    <key>schema-version</key>
+                </entry>
+                <entry>
+                    <key>schema-branch</key>
+                </entry>
+                <entry>
+                    <key>schema-text</key>
+                    <value>${avro.schema}</value>
                 </entry>
                 <entry>
                     <key>schema-inference-cache</key>
@@ -415,25 +446,10 @@
                     <key>Date Format</key>
                 </entry>
                 <entry>
-                    <key>schema-branch</key>
-                </entry>
-                <entry>
-                    <key>schema-name</key>
-                </entry>
-                <entry>
-                    <key>schema-registry</key>
-                </entry>
-                <entry>
                     <key>Time Format</key>
                 </entry>
                 <entry>
-                    <key>schema-access-strategy</key>
-                </entry>
-                <entry>
-                    <key>schema-version</key>
-                </entry>
-                <entry>
-                    <key>schema-text</key>
+                    <key>Timestamp Format</key>
                 </entry>
             </properties>
             <state>ENABLED</state>
@@ -443,8 +459,8 @@
             <id>599102b6-f972-3bdd-0000-000000000000</id>
             <parentGroupId>8911a709-e53a-3ca1-0000-000000000000</parentGroupId>
             <position>
-                <x>0.0</x>
-                <y>192.0</y>
+                <x>560.0</x>
+                <y>0.0</y>
             </position>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
@@ -452,22 +468,22 @@
                 <version>1.13.0</version>
             </bundle>
             <config>
-                <bulletinLevel>WARN</bulletinLevel>
+                <bulletinLevel>DEBUG</bulletinLevel>
                 <comments></comments>
                 <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                 <descriptors>
-                    <entry>
-                        <key>Record Writer</key>
-                        <value>
-                            <identifiesControllerService>org.apache.nifi.serialization.RecordSetWriterFactory</identifiesControllerService>
-                            <name>Record Writer</name>
-                        </value>
-                    </entry>
                     <entry>
                         <key>Record Reader</key>
                         <value>
                             <identifiesControllerService>org.apache.nifi.serialization.RecordReaderFactory</identifiesControllerService>
                             <name>Record Reader</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Record Writer</key>
+                        <value>
+                            <identifiesControllerService>org.apache.nifi.serialization.RecordSetWriterFactory</identifiesControllerService>
+                            <name>Record Writer</name>
                         </value>
                     </entry>
                     <entry>
@@ -482,12 +498,12 @@
                 <penaltyDuration>30 sec</penaltyDuration>
                 <properties>
                     <entry>
-                        <key>Record Writer</key>
-                        <value>719546f0-b2d7-3e34-0000-000000000000</value>
-                    </entry>
-                    <entry>
                         <key>Record Reader</key>
                         <value>d71af22f-e40d-364f-0000-000000000000</value>
+                    </entry>
+                    <entry>
+                        <key>Record Writer</key>
+                        <value>719546f0-b2d7-3e34-0000-000000000000</value>
                     </entry>
                     <entry>
                         <key>Records Per Split</key>
@@ -521,7 +537,7 @@
             <id>79619cf1-2283-3a29-0000-000000000000</id>
             <parentGroupId>8911a709-e53a-3ca1-0000-000000000000</parentGroupId>
             <position>
-                <x>40.0</x>
+                <x>0.0</x>
                 <y>0.0</y>
             </position>
             <bundle>
@@ -530,14 +546,26 @@
                 <version>1.13.0</version>
             </bundle>
             <config>
-                <bulletinLevel>WARN</bulletinLevel>
-                <comments></comments>
+                <bulletinLevel>DEBUG</bulletinLevel>
+                <comments>Python script that gets playback history</comments>
                 <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                 <descriptors>
                     <entry>
                         <key>Command</key>
                         <value>
                             <name>Command</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Command Arguments</key>
+                        <value>
+                            <name>Command Arguments</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Batch Duration</key>
+                        <value>
+                            <name>Batch Duration</name>
                         </value>
                     </entry>
                     <entry>
@@ -558,18 +586,6 @@
                             <name>Argument Delimiter</name>
                         </value>
                     </entry>
-                    <entry>
-                        <key>Batch Duration</key>
-                        <value>
-                            <name>Batch Duration</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>Command Arguments</key>
-                        <value>
-                            <name>Command Arguments</name>
-                        </value>
-                    </entry>
                 </descriptors>
                 <executionNode>ALL</executionNode>
                 <lossTolerant>false</lossTolerant>
@@ -578,6 +594,13 @@
                     <entry>
                         <key>Command</key>
                         <value>/home/nifi/miniconda3/envs/spotify/bin/python</value>
+                    </entry>
+                    <entry>
+                        <key>Command Arguments</key>
+                        <value>spoti.py</value>
+                    </entry>
+                    <entry>
+                        <key>Batch Duration</key>
                     </entry>
                     <entry>
                         <key>Redirect Error Stream</key>
@@ -591,13 +614,6 @@
                         <key>Argument Delimiter</key>
                         <value> </value>
                     </entry>
-                    <entry>
-                        <key>Batch Duration</key>
-                    </entry>
-                    <entry>
-                        <key>Command Arguments</key>
-                        <value>spoti.py</value>
-                    </entry>
                 </properties>
                 <runDurationMillis>0</runDurationMillis>
                 <schedulingPeriod>86400 sec</schedulingPeriod>
@@ -605,12 +621,12 @@
                 <yieldDuration>1 sec</yieldDuration>
             </config>
             <executionNodeRestricted>false</executionNodeRestricted>
-            <name>ExecuteProcess</name>
+            <name>GetPlayedTracks</name>
             <relationships>
                 <autoTerminate>false</autoTerminate>
                 <name>success</name>
             </relationships>
-            <state>RUNNING</state>
+            <state>STOPPED</state>
             <style/>
             <type>org.apache.nifi.processors.standard.ExecuteProcess</type>
         </processors>
@@ -618,8 +634,8 @@
             <id>cdd64010-45dd-3eee-0000-000000000000</id>
             <parentGroupId>8911a709-e53a-3ca1-0000-000000000000</parentGroupId>
             <position>
-                <x>232.0</x>
-                <y>416.0</y>
+                <x>568.0</x>
+                <y>248.0</y>
             </position>
             <bundle>
                 <artifact>nifi-azure-nar</artifact>
@@ -632,15 +648,34 @@
                 <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                 <descriptors>
                     <entry>
-                        <key>insert-batch-size</key>
+                        <key>azure-cosmos-db-connection-service</key>
                         <value>
-                            <name>insert-batch-size</name>
+                            <identifiesControllerService>org.apache.nifi.services.azure.cosmos.AzureCosmosDBConnectionService</identifiesControllerService>
+                            <name>azure-cosmos-db-connection-service</name>
                         </value>
                     </entry>
                     <entry>
-                        <key>azure-cosmos-db-partition-key</key>
+                        <key>azure-cosmos-db-uri</key>
                         <value>
-                            <name>azure-cosmos-db-partition-key</name>
+                            <name>azure-cosmos-db-uri</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>azure-cosmos-db-key</key>
+                        <value>
+                            <name>azure-cosmos-db-key</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>azure-cosmos-db-consistency-level</key>
+                        <value>
+                            <name>azure-cosmos-db-consistency-level</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>azure-cosmos-db-name</key>
+                        <value>
+                            <name>azure-cosmos-db-name</name>
                         </value>
                     </entry>
                     <entry>
@@ -650,9 +685,9 @@
                         </value>
                     </entry>
                     <entry>
-                        <key>azure-cosmos-db-uri</key>
+                        <key>azure-cosmos-db-partition-key</key>
                         <value>
-                            <name>azure-cosmos-db-uri</name>
+                            <name>azure-cosmos-db-partition-key</name>
                         </value>
                     </entry>
                     <entry>
@@ -663,9 +698,9 @@
                         </value>
                     </entry>
                     <entry>
-                        <key>azure-cosmos-db-consistency-level</key>
+                        <key>insert-batch-size</key>
                         <value>
-                            <name>azure-cosmos-db-consistency-level</name>
+                            <name>insert-batch-size</name>
                         </value>
                     </entry>
                     <entry>
@@ -674,67 +709,48 @@
                             <name>azure-cosmos-db-conflict-handling-strategy</name>
                         </value>
                     </entry>
-                    <entry>
-                        <key>azure-cosmos-db-connection-service</key>
-                        <value>
-                            <identifiesControllerService>org.apache.nifi.services.azure.cosmos.AzureCosmosDBConnectionService</identifiesControllerService>
-                            <name>azure-cosmos-db-connection-service</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>azure-cosmos-db-key</key>
-                        <value>
-                            <name>azure-cosmos-db-key</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>azure-cosmos-db-name</key>
-                        <value>
-                            <name>azure-cosmos-db-name</name>
-                        </value>
-                    </entry>
                 </descriptors>
                 <executionNode>ALL</executionNode>
                 <lossTolerant>false</lossTolerant>
                 <penaltyDuration>30 sec</penaltyDuration>
                 <properties>
                     <entry>
-                        <key>insert-batch-size</key>
-                        <value>20</value>
-                    </entry>
-                    <entry>
-                        <key>azure-cosmos-db-partition-key</key>
-                        <value>played_at</value>
-                    </entry>
-                    <entry>
-                        <key>azure-cosmos-db-container-id</key>
-                        <value>my_played_songs</value>
+                        <key>azure-cosmos-db-connection-service</key>
+                        <value>b7f9f240-f542-344c-0000-000000000000</value>
                     </entry>
                     <entry>
                         <key>azure-cosmos-db-uri</key>
                     </entry>
                     <entry>
-                        <key>record-reader</key>
-                        <value>d71af22f-e40d-364f-0000-000000000000</value>
+                        <key>azure-cosmos-db-key</key>
                     </entry>
                     <entry>
                         <key>azure-cosmos-db-consistency-level</key>
                         <value>SESSION</value>
                     </entry>
                     <entry>
-                        <key>azure-cosmos-db-conflict-handling-strategy</key>
-                        <value>IGNORE</value>
-                    </entry>
-                    <entry>
-                        <key>azure-cosmos-db-connection-service</key>
-                        <value>b7f9f240-f542-344c-0000-000000000000</value>
-                    </entry>
-                    <entry>
-                        <key>azure-cosmos-db-key</key>
-                    </entry>
-                    <entry>
                         <key>azure-cosmos-db-name</key>
                         <value>my_spotify_data</value>
+                    </entry>
+                    <entry>
+                        <key>azure-cosmos-db-container-id</key>
+                        <value>my_played_songs</value>
+                    </entry>
+                    <entry>
+                        <key>azure-cosmos-db-partition-key</key>
+                        <value>played_at</value>
+                    </entry>
+                    <entry>
+                        <key>record-reader</key>
+                        <value>d71af22f-e40d-364f-0000-000000000000</value>
+                    </entry>
+                    <entry>
+                        <key>insert-batch-size</key>
+                        <value>20</value>
+                    </entry>
+                    <entry>
+                        <key>azure-cosmos-db-conflict-handling-strategy</key>
+                        <value>IGNORE</value>
                     </entry>
                 </properties>
                 <runDurationMillis>0</runDurationMillis>
@@ -757,5 +773,5 @@
             <type>org.apache.nifi.processors.azure.cosmos.document.PutAzureCosmosDBRecord</type>
         </processors>
     </snippet>
-    <timestamp>03/21/2021 22:15:59 UTC</timestamp>
+    <timestamp>03/23/2021 02:31:43 UTC</timestamp>
 </template>
