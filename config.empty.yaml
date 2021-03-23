@@ -1,0 +1,11 @@
+spotify_api:
+  client_id:
+  client_secret:
+  scope:
+  redirect_uri:
+azure-cosmos:
+  uri:
+  key:
+  account_name:
+  db_name:
+  container_name:
