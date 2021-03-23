@@ -1,1 +1,1 @@
-(img/nifi-flow.png)
+![nifi flow](img/nifi-flow.png)
